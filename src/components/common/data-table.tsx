@@ -5,6 +5,7 @@ import {
   getPaginationRowModel,
   useReactTable,
 } from '@tanstack/react-table';
+import { useTranslation } from 'react-i18next';
 
 import {
   Table,
@@ -25,6 +26,7 @@ export const DataTable = <TData, TValue>({
   columns,
   data,
 }: DataTableProps<TData, TValue>) => {
+  const { t } = useTranslation();
   const table = useReactTable({
     data,
     columns,
@@ -77,7 +79,7 @@ export const DataTable = <TData, TValue>({
                   colSpan={columns.length}
                   className="h-24 text-center"
                 >
-                  No results.
+                  {t('tickets.noResults')}
                 </TableCell>
               </TableRow>
             )}
@@ -92,7 +94,7 @@ export const DataTable = <TData, TValue>({
           onClick={table.previousPage}
           disabled={!table.getCanPreviousPage()}
         >
-          Previous
+          {t('tickets.previous')}
         </Button>
         <Button
           variant="outline"
@@ -100,7 +102,7 @@ export const DataTable = <TData, TValue>({
           onClick={table.nextPage}
           disabled={!table.getCanNextPage()}
         >
-          Next
+          {t('tickets.next')}
         </Button>
       </div>
     </div>

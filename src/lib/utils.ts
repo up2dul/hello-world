@@ -24,3 +24,7 @@ export function formatTime(isoDate: string) {
   };
   return date.toLocaleTimeString('en-US', options);
 }
+
+export function getCurrentLang() {
+  return localStorage.getItem('lang') ?? 'en';
+}

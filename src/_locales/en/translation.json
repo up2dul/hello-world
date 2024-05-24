@@ -1,0 +1,40 @@
+{
+  "login": {
+    "title": "Ticket Dashboard - Login",
+    "subtitle": "Enter your email and password below to login",
+    "submit": "Login",
+    "invalid": {
+      "email": "Email not found",
+      "password": "Password is invalid"
+    },
+    "email": {
+      "placeholder": "m@example.com",
+      "required": "Email is required!",
+      "invalid": "Please enter a valid email address"
+    },
+    "password": {
+      "required": "Password is required!",
+      "invalid": "Password must be at least 8 characters long"
+    }
+  },
+  "navigation": {
+    "settings": "Settings",
+    "logout": "Log out"
+  },
+  "overview": {
+    "chartTitle": "Tickets graph in 1 year"
+  },
+  "tickets": {
+    "title": "Tickets",
+    "all": "All Tickets",
+    "columns": {
+      "ticketDetails": "Ticket Details",
+      "customerName": "Customer Name",
+      "date": "Date",
+      "priority": "Priority"
+    },
+    "noResults": "No results",
+    "previous": "Previous",
+    "next": "Next"
+  }
+}

@@ -1,3 +1,4 @@
+import { t } from 'i18next';
 import { omit } from 'radash';
 
 import { AccessToken } from './constant';
@@ -34,10 +35,10 @@ export async function login({
 
     const user = users.find(user => user.email === email);
     if (!user) {
-      throw Error(`User with email ${email} not found`);
+      throw Error(t('login.invalid.email'));
     }
     if (user.password !== password) {
-      throw Error('Invalid password');
+      throw Error(t('login.invalid.password'));
     }
 
     localStorage.setItem('accessToken', user.accessToken);
