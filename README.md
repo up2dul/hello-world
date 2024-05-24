@@ -1,4 +1,4 @@
-# Ticket Dashboard
+# 🎫 Ticket Dashboard
 
 ## About
 
@@ -46,7 +46,7 @@ pnpm install
 
 ### Start the development server
 ```bash
-pnpm run dev
+pnpm dev
 ```
 The application will be available at `http://localhost:5173`.
 
