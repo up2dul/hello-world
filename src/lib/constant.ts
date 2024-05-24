@@ -15,16 +15,16 @@ export enum Role {
 export const USER: Record<Role, User> = {
   [Role.ADMIN]: {
     role: Role.ADMIN,
-    email: 'admin@up2dul.dev',
-    password: 'admin123',
+    email: 'admin@gmail.com',
+    password: 'adminadmin',
     name: 'Abdul',
     imgUrl: 'https://api.dicebear.com/8.x/thumbs/svg?seed=Misty',
     accessToken: AccessToken.ADMIN,
   },
   [Role.GUEST]: {
     role: Role.GUEST,
-    email: 'guest@up2dul.dev',
-    password: 'guest123',
+    email: 'guest@gmail.com',
+    password: 'guestguest',
     name: 'Malik',
     imgUrl: 'https://api.dicebear.com/8.x/thumbs/svg?seed=Casper',
     accessToken: AccessToken.GUEST,
