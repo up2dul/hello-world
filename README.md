@@ -1,30 +1,64 @@
-# React + TypeScript + Vite
+# Ticket Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About
 
-Currently, two official plugins are available:
+### Main tech stack
+- React v18.2.0
+- Vite v5.2.0
+- Tailwind CSS v3.4.3
+- TypeScript v5.2.2
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Some common libraries 
+- Generouted & React Router
+- i18next & react-i18next
+- Lucide React
+- Radash
+- React Hook Form
+- Recharts
+- Tanstack Table
+- Zod
 
-## Expanding the ESLint configuration
+### Development libraries
+- Biome
+- Commitlint
+- Husky
+- Lint Staged
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
+### Clone the repository
+```bash
+git clone https://github.com/up2dul/ticket-dashboard.git
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+# or if using SSH
+git clone git@github.com:up2dul/ticket-dashboard.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Move into the project directory
+```bash
+cd ticket-dashboard
+```
+
+### Install dependencies
+```bash
+pnpm install
+```
+
+### Start the development server
+```bash
+pnpm run dev
+```
+The application will be available at `http://localhost:5173`.
+
+## Authentication
+Login using the existing accounts:
+
+**Admin**
+- Email: `admin@gmail.com`
+- Password: `adminadmin`
+
+**Guest**
+- Email: `guest@gmail.com`
+- Password: `guestguest`
+
+These accounts are used for testing purposes only and stored in `src/lib/data.ts`.
