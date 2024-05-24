@@ -2,6 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { AlertCircle } from 'lucide-react';
 import { tryit } from 'radash';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import { Alert, AlertDescription, AlertTitle } from '~/components/ui/alert';
 import { Button } from '~/components/ui/button';
@@ -19,6 +20,7 @@ import { useNavigate } from '~/router';
 import { type LoginSchema, loginSchema } from '~/schemas/login';
 
 export default function Login() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const {
     register,
@@ -45,12 +47,8 @@ export default function Login() {
     <section className="mt-16 mx-auto max-w-sm">
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">
-            🎫 Ticket Dashboard - Login
-          </CardTitle>
-          <CardDescription>
-            Enter your email below to login to your account
-          </CardDescription>
+          <CardTitle className="text-2xl">🎫 {t('login.title')}</CardTitle>
+          <CardDescription>{t('login.subtitle')}</CardDescription>
         </CardHeader>
 
         <CardContent>
@@ -60,14 +58,19 @@ export default function Login() {
               <Input
                 id="email"
                 type="email"
-                placeholder="m@example.com"
+                placeholder={t('login.email.placeholder')}
                 {...register('email')}
               />
             </div>
 
             <div className="grid gap-2">
               <Label htmlFor="password">Password</Label>
-              <Input id="password" type="password" {...register('password')} />
+              <Input
+                id="password"
+                type="password"
+                placeholder="***"
+                {...register('password')}
+              />
             </div>
 
             <Button type="submit" className="w-full">

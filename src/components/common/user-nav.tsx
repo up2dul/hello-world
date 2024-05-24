@@ -1,4 +1,5 @@
 import { tryit } from 'radash';
+import { useTranslation } from 'react-i18next';
 
 import { Avatar, AvatarImage } from '~/components/ui/avatar';
 import { Button } from '~/components/ui/button';
@@ -15,6 +16,7 @@ import { getUserData, logout } from '~/lib/auth';
 import { useNavigate } from '~/router';
 
 export const UserNav = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const user = getUserData();
 
@@ -48,12 +50,14 @@ export const UserNav = () => {
         <DropdownMenuSeparator />
 
         <DropdownMenuGroup>
-          <DropdownMenuItem>Settings</DropdownMenuItem>
+          <DropdownMenuItem>{t('navigation.settings')}</DropdownMenuItem>
         </DropdownMenuGroup>
 
         <DropdownMenuSeparator />
 
-        <DropdownMenuItem onClick={handleLogout}>Log out</DropdownMenuItem>
+        <DropdownMenuItem onClick={handleLogout}>
+          {t('navigation.logout')}
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
