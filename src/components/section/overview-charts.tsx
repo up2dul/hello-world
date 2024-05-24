@@ -9,57 +9,7 @@ import {
   YAxis,
 } from 'recharts';
 
-// temporary data
-const data = [
-  {
-    name: 'Jan',
-    total: Math.floor(Math.random() * 200),
-  },
-  {
-    name: 'Feb',
-    total: Math.floor(Math.random() * 200),
-  },
-  {
-    name: 'Mar',
-    total: Math.floor(Math.random() * 200),
-  },
-  {
-    name: 'Apr',
-    total: Math.floor(Math.random() * 200),
-  },
-  {
-    name: 'May',
-    total: Math.floor(Math.random() * 200),
-  },
-  {
-    name: 'Jun',
-    total: Math.floor(Math.random() * 200),
-  },
-  {
-    name: 'Jul',
-    total: Math.floor(Math.random() * 200),
-  },
-  {
-    name: 'Aug',
-    total: Math.floor(Math.random() * 200),
-  },
-  {
-    name: 'Sep',
-    total: Math.floor(Math.random() * 200),
-  },
-  {
-    name: 'Oct',
-    total: Math.floor(Math.random() * 200),
-  },
-  {
-    name: 'Nov',
-    total: Math.floor(Math.random() * 200),
-  },
-  {
-    name: 'Dec',
-    total: Math.floor(Math.random() * 200),
-  },
-];
+import { overviewChartsData } from '~/lib/data';
 
 export const OverviewCharts = () => {
   return (
@@ -67,7 +17,7 @@ export const OverviewCharts = () => {
       <LineChart
         width={500}
         height={300}
-        data={data}
+        data={overviewChartsData}
         margin={{
           top: 5,
           right: 30,

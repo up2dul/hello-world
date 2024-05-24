@@ -1,40 +1,10 @@
 import type { ColumnDef } from '@tanstack/react-table';
-import { capitalize, uid } from 'radash';
+import { capitalize } from 'radash';
 
 import { DataTable } from '~/components/common';
+import { ticketsData } from '~/lib/data';
 import type { Ticket } from '~/lib/types';
 import { cn, formatDate, formatTime } from '~/lib/utils';
-
-// temporary tickets data
-const ticketsData: Omit<Ticket, 'assignee'>[] = [
-  {
-    id: uid(4),
-    title: 'Contact email not linked',
-    customerName: 'John Doe',
-    imgUrl: 'https://placekitten.com/200/300',
-    priority: 'high',
-    createdAt: '2024-05-24T01:28:06+0700',
-    updatedAt: '2024-05-24T01:28:06+0700',
-  },
-  {
-    id: uid(4),
-    title: 'Unable to login',
-    customerName: 'Jane Doe',
-    imgUrl: 'https://placekitten.com/200/300',
-    priority: 'normal',
-    createdAt: '2024-02-24T01:28:06+0700',
-    updatedAt: '2024-02-24T01:28:06+0700',
-  },
-  {
-    id: uid(4),
-    title: 'How do I reset my password?',
-    customerName: 'Bob Smith',
-    imgUrl: 'https://placekitten.com/200/300',
-    priority: 'low',
-    createdAt: '2024-01-24T01:28:06+0700',
-    updatedAt: '2024-01-24T01:28:06+0700',
-  },
-];
 
 const columns: ColumnDef<Omit<Ticket, 'assignee'>>[] = [
   {

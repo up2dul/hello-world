@@ -1,6 +1,7 @@
 import { omit } from 'radash';
 
-import { AccessToken, USER } from './constant';
+import { AccessToken } from './constant';
+import { users } from './data';
 import type { User } from './types';
 
 function getToken() {
@@ -14,7 +15,7 @@ export function getIsLoggedIn() {
 
 export function getUserData(): User | null {
   const token = getToken();
-  return Object.values(USER).find(user => user.accessToken === token) || null;
+  return users.find(user => user.accessToken === token) || null;
 }
 
 function setUserData(user: User) {
@@ -31,7 +32,7 @@ export async function login({
   try {
     await new Promise(resolve => setTimeout(resolve, 800)); // fake loading
 
-    const user = Object.values(USER).find(user => user.email === email);
+    const user = users.find(user => user.email === email);
     if (!user) {
       throw Error(`User with email ${email} not found`);
     }
