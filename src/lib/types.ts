@@ -6,3 +6,14 @@ export type User = {
   imgUrl: string;
   accessToken: string;
 };
+
+export type Ticket = {
+  id: string;
+  title: string;
+  customerName: string;
+  imgUrl: string;
+  priority: 'high' | 'normal' | 'low';
+  createdAt: string;
+  updatedAt: string;
+  assignee: string;
+};
