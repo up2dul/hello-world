@@ -1,0 +1,36 @@
+{
+  "login": {
+    "title": "Dashboard Tiket - Login",
+    "subtitle": "Masukkan email dan kata sandi di bawah untuk masuk",
+    "submit": "Login",
+    "email": {
+      "placeholder": "m@example.com",
+      "required": "Email wajib diisi!",
+      "invalid": "Silakan masukkan alamat email yang valid"
+    },
+    "password": {
+      "required": "Kata sandi wajib diisi!",
+      "invalid": "Kata sandi harus minimal 8 karakter"
+    }
+  },
+  "navigation": {
+    "settings": "Pengaturan",
+    "logout": "Keluar"
+  },
+  "overview": {
+    "chartTitle": "Grafik Tiket dalam 1 tahun"
+  },
+  "tickets": {
+    "title": "Tiket", 
+    "all": "Semua Tiket",
+    "columns": {
+      "ticketDetails": "Detail Tiket",
+      "customerName": "Nama Pelanggan",
+      "date": "Tanggal",
+      "priority": "Prioritas"
+    },
+    "noResults": "Tidak ada hasil",
+    "previous": "Sebelumnya",
+    "next": "Selanjutnya"
+  }
+}
