@@ -94,7 +94,7 @@ export const DataTable = <TData, TValue>({
           onClick={table.previousPage}
           disabled={!table.getCanPreviousPage()}
         >
-          {t('previous')}
+          {t('tickets.previous')}
         </Button>
         <Button
           variant="outline"
@@ -102,7 +102,7 @@ export const DataTable = <TData, TValue>({
           onClick={table.nextPage}
           disabled={!table.getCanNextPage()}
         >
-          {t('next')}
+          {t('tickets.next')}
         </Button>
       </div>
     </div>
