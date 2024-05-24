@@ -3,6 +3,10 @@
     "title": "Ticket Dashboard - Login",
     "subtitle": "Enter your email and password below to login",
     "submit": "Login",
+    "invalid": {
+      "email": "Email not found",
+      "password": "Password is invalid"
+    },
     "email": {
       "placeholder": "m@example.com",
       "required": "Email is required!",
@@ -28,9 +32,9 @@
       "customerName": "Customer Name",
       "date": "Date",
       "priority": "Priority"
-    }
-  },
-  "noResults": "No results",
-  "previous": "Previous",
-  "next": "Next"
+    },
+    "noResults": "No results",
+    "previous": "Previous",
+    "next": "Next"
+  }
 }

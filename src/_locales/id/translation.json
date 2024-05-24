@@ -3,6 +3,10 @@
     "title": "Dashboard Tiket - Login",
     "subtitle": "Masukkan email dan kata sandi di bawah untuk masuk",
     "submit": "Login",
+    "invalid": {
+      "email": "Email tidak ditemukan",
+      "password": "Kata sandi salah"
+    },
     "email": {
       "placeholder": "m@example.com",
       "required": "Email wajib diisi!",
