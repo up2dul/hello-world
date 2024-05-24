@@ -32,6 +32,6 @@ export const USER: Record<Role, User> = {
 };
 
 export const PATH: Record<string, Path[]> = {
-  PRIVATE: ['/'],
+  PRIVATE: ['/overview', '/tickets'],
   PUBLIC: ['/login'],
 };
