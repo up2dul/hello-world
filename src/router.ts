@@ -7,7 +7,7 @@ export type Path =
   | `/`
   | `/login`
   | `/overview`
-  | `/ticket`
+  | `/tickets`
 
 export type Params = {
   
