@@ -14,7 +14,7 @@ export const MenuNav = () => {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link to="/ticket">Ticket</Link>
+          <Link to="/tickets">Tickets</Link>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
