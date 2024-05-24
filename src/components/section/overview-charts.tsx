@@ -9,6 +9,7 @@ import {
   YAxis,
 } from 'recharts';
 
+// temporary data
 const data = [
   {
     name: 'Jan',
@@ -77,7 +78,7 @@ export const OverviewCharts = () => {
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis orientation="right" />
-        <Tooltip />
+        <Tooltip labelStyle={{ color: '#020817' }} />
         <Legend verticalAlign="top" align="center" />
         <Line type="monotone" dataKey="total" stroke="#3751ff" />
       </LineChart>
