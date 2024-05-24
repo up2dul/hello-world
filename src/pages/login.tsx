@@ -1,5 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { AlertCircle } from 'lucide-react';
+import { tryit } from 'radash';
 import { useForm } from 'react-hook-form';
 
 import { Alert, AlertDescription, AlertTitle } from '~/components/ui/alert';
@@ -29,15 +30,14 @@ export default function Login() {
   });
 
   const onSubmit = async (data: LoginSchema) => {
-    try {
-      const user = await login(data);
-      if (user) {
-        navigate('/');
-      }
-    } catch (error) {
+    const [err, user] = await tryit(login)(data);
+    if (err) {
       setError('root', {
-        message: (error as Error).message,
+        message: (err as Error).message,
       });
+    }
+    if (user) {
+      navigate('/overview');
     }
   };
 

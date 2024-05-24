@@ -1,3 +1,5 @@
+import { omit } from 'radash';
+
 import { AccessToken, USER } from './constant';
 import type { User } from './types';
 
@@ -16,8 +18,9 @@ export function getUserData(): User | null {
 }
 
 function setUserData(user: User) {
+  const userData = omit(user, ['accessToken', 'password']);
   localStorage.setItem('accessToken', user.accessToken);
-  localStorage.setItem('userData', JSON.stringify(user));
+  localStorage.setItem('userData', JSON.stringify(userData));
 }
 
 // login function with fake loading Promise
